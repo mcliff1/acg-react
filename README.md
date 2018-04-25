@@ -12,3 +12,12 @@ HTML
 CSS
 FontAwesome
 Google Fonts
+
+### TODO
+
+add Code Build to CFN 
+add S3 bucket needed for this
+
+add Lambda function to deploy from code build S3 bucket to runtime webapp S3 bucket
+use environment params (put in CFN configuration)
+ - dont forget permissions on lambda
