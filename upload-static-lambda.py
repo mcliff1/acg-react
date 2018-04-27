@@ -1,3 +1,4 @@
+import os
 import boto3
 import StringIO
 import zipfile
@@ -10,8 +11,8 @@ def lambda_handler(event, context):
     """
     
     s3 = boto3.resource('s3')
-    build_bucket = s3.Bucket('slsweb-codebuild')
-    deploy_bucket = s3.Bucket('slsweb-dev-websites3-14yjro36amv9c')
+    build_bucket = s3.Bucket(os.environ['SOURCE_BUCKET'])
+    deploy_bucket = s3.Bucket(os.environ['TARGET_BUCKET'])
 
 
     build_zip = StringIO.StringIO()
