@@ -12,5 +12,6 @@ artifacts:
     - babel.html
     - favicon.ico
     - mcliff_resume_2018_04.pdf
+    - tms/*
     - styles/*
     - images/*
